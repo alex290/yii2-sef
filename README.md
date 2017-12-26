@@ -1,31 +1,54 @@
-Sef URL
+Yii2 ЧПУ ссылок (URL) для сайта
 =======
-Sef URL
 
-Installation
+
+Установка
 ------------
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+Предпочтительный способ установки этого расширения через [composer](http://getcomposer.org/download/).
 
-Either run
-
-```
-php composer.phar require --prefer-dist alex290/yii2-sef "*"
-```
-
-or add
+Запустить
 
 ```
-"alex290/yii2-sef": "*"
+php composer.phar require --prefer-dist alex290/yii2-sef "1.0.0"
 ```
 
-to the require section of your `composer.json` file.
+или добавить
+
+```
+"alex290/yii2-sef": "1.0.0"
+```
+
+в секцию require вашего `composer.json` файла.
+
+**И запустить миграцию файла**
+
+	yii migrate/up --migrationPath=@vendor/alex290/yii2-sef/migrations
+
+Можно создать вручную. А именно - таблицу `sef`, в ней только 3 поля:
+
+id (primaryKey, AUTO_INCREMENT);
+link (varchar(255));
+link_sef (varchar(255)).
 
 
-Usage
+Использование
 -----
 
-Once the extension is installed, simply use it in your code by  :
+В файле: `config/web.php` прописать
 
-```php
-<?= \alex290\sef\AutoloadExample::widget(); ?>```
+		'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                [ 
+                    'class' => 'alex290\sef\SefRule',
+                    'connectionID' => 'db',
+                ],
+            ],
+        ],
+
+Для админки можно создать модель `Sef`, а можно использовать готовую `alex290\sef\Sef`
+
+'link' = это поле оригинальной ссылки например, article/view?id=49
+'link_sef' = это поле синоним URL
