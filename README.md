@@ -37,10 +37,10 @@ link_sef (varchar(255)).
 
 В файле: `config/web.php` прописать
 
-		'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
+        'urlManager' => [
+        'enablePrettyUrl' => true,
+        'showScriptName' => false,
+        'rules' => [
                 [ 
                     'class' => 'alex290\sef\SefRule',
                     'connectionID' => 'db',
@@ -51,4 +51,5 @@ link_sef (varchar(255)).
 Для админки можно создать модель `Sef`, а можно использовать готовую `alex290\sef\Sef`
 
 'link' = это поле оригинальной ссылки например, article/view?id=49
+
 'link_sef' = это поле синоним URL
