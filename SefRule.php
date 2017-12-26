@@ -2,7 +2,7 @@
 
 namespace alex290\sef;
 
-use app\models\Sef;
+use alex290\sef\Sef;
 use yii\web\UrlRuleInterface;
 use yii\base\Object;
 /*
