@@ -28,7 +28,9 @@ php composer.phar require --prefer-dist alex290/yii2-sef "1.0.0"
 Можно создать вручную. А именно - таблицу `sef`, в ней только 3 поля:
 
 id (primaryKey, AUTO_INCREMENT);
+
 link (varchar(255));
+
 link_sef (varchar(255)).
 
 
