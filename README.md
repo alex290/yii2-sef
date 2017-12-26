@@ -41,6 +41,7 @@ link_sef (varchar(255)).
         'enablePrettyUrl' => true,
         'showScriptName' => false,
         'rules' => [
+                // Тут свои правила.
                 [ 
                     'class' => 'alex290\sef\SefRule',
                     'connectionID' => 'db',
