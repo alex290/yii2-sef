@@ -10,13 +10,13 @@ Yii2 ЧПУ ссылок (URL) для сайта
 Запустить
 
 ```
-php composer.phar require --prefer-dist alex290/yii2-sef "1.0.0"
+php composer.phar require --prefer-dist alex290/yii2-sef "*"
 ```
 
 или добавить
 
 ```
-"alex290/yii2-sef": "1.0.0"
+"alex290/yii2-sef": "*"
 ```
 
 в секцию require вашего `composer.json` файла.
